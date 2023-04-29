@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% include 'headerLinks.html'%}
+
+
+    <title>Document</title>
+</head>
+
+<body style="background: url(../static/images/pg.jpg);background-repeat: no-repeat;background-size: cover;">
+
+    <div class="container">
+
+        {%include 'navbar.html'%}
+
+        <div>
+            <form action="/subdomain" method="POST">
+                <input id="inp" type="text" name="domainName" placeholder="Enter Domain Name" id="ip">
+                <button id="searchBtn" type="submit">Search</button>
+            </form>
+        </div>
+
+        
+        <div>
+            <div>
+                <h3 class="heading">URL after scanning subdomains</h3>
+            </div>
+            <div id="domainDiv">
+                {{domain}}
+                {% for p in urls %}
+                <div class="card post-outer-container shadow-sm bg-white rounded"
+                    style="width: fit-content;padding: 5px;margin: 5px;" id="initial-post">
+                    <article class="card-body" style="padding: 5px;">
+                        <h3 class="productNameLink post-title entry-title" style="margin: 0;" value="">
+                            {{p}}
+                        </h3>
+
+                    </article>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("searchBtn").addEventListener("click", () => {
+            document.getElementById("domainDiv").innerHTML = "";
+        })
+    </script>
+
+</body>
+
+</html>

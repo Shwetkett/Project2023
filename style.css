@@ -1,0 +1,87 @@
+h3 {
+  text-align: left;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.container {
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+#inp {
+  position: absolute;
+  color: white;
+  padding: 20px 200px;
+  border-radius: 15px;
+  border: 1px solid grey;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+}
+
+#searchBtn {
+  padding: 15px 80px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  border-radius: 25px;
+  width: 100%;
+  background-color: #c3d0dd;
+  overflow: auto;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-evenly;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  border-radius: 25px;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #c3d0dd;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
